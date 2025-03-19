@@ -395,7 +395,7 @@ public:
     }
     //setDataVector() is used for setting Model data
     void setDataVector(const vector<vector<int>>& newData) {
-        mydata = newData;
+        mydata = move(newData);
     }
     //When data source is json, following method is called from vie passing file name
     // file is later parsed for data from behind the scene data provider & path finding is performed (ideally they will be separated in a system)
